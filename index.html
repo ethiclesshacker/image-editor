@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      img {
+        width: 200px;
+      }
+    </style>
+    <title>Client Image Editor</title>
+  </head>
+  <body>
+    <center>
+      <h2>Welcome</h2>
+      <form>
+        <label for="image">Select Image: </label>
+        <input type="file" name="image" id="image-file" />
+        <input type="submit" value="Submit" />
+      </form>
+      <img src="" alt="" class="og" />
+      <img src="" alt="" class="new" />
+    </center>
+    <script type="module">
+      import * as Magick from "https://knicknic.github.io/wasm-imagemagick/magickApi.js";
+      window.magick = Magick;
+    </script>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
